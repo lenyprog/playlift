@@ -1,0 +1,117 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f7f9fc;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  background: #1db954;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+button {
+  background: white;
+  border: none;
+  color: #1db954;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: #1ed760;
+  color: white;
+}
+
+main {
+  flex-grow: 1;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #1db954;
+}
+
+#user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+#user-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#playlists-list,
+#playlist-tracks {
+  list-style: none;
+  margin-top: 1rem;
+  max-height: 350px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  padding: 1rem;
+}
+
+#playlists-list li,
+#playlist-tracks li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#playlists-list li:hover,
+#playlist-tracks li:hover {
+  background: #e6f4ea;
+}
+
+.hidden {
+  display: none;
+}
+
+#stats-content p {
+  margin-bottom: 0.8rem;
+}
+
+#error-message {
+  background: #ffdddd;
+  border: 1px solid #ff5c5c;
+  color: #b00000;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  max-width: 600px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #999;
+  font-size: 0.9rem;
+}
