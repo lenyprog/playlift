@@ -55,14 +55,15 @@ app.get('/login', (req, res) => {
 
   const params = new URLSearchParams({
     response_type: 'code',
-    client_id: SPOTIFY_CLIENT_ID,
+    client_id: process.env.SPOTIFY_CLIENT_ID,
     scope,
-    redirect_uri: REDIRECT_URI,
+    redirect_uri: process.env.REDIRECT_URI,
     state,
   });
 
   res.redirect(`https://accounts.spotify.com/authorize?${params.toString()}`);
 });
+
 
 // --- ROUTE /callback : échange code contre tokens ---
 app.get('/callback', async (req, res) => {
