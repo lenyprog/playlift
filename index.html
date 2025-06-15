@@ -1,17 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Playlift</title>
-  <link rel="stylesheet" href="assets/css/style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Playlift by Leny — Ton Spotify Wrap et Tri Playlists</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to Playlift</h1>
-    <p>Connect your Spotify and analyze your music life.</p>
-    <button onclick="authorize()">Connect with Spotify</button>
-  </div>
-  <script src="assets/js/script.js"></script>
+  <header>
+    <h1>Playlift 🎵</h1>
+    <button id="btn-login">Connecter Spotify</button>
+    <button id="btn-logout" style="display:none;">Déconnexion</button>
+  </header>
+
+  <main>
+    <section id="user-info" class="hidden">
+      <h2>Bienvenue, <span id="user-name"></span>!</h2>
+      <img id="user-img" alt="Photo utilisateur" />
+    </section>
+
+    <section id="playlists-section" class="hidden">
+      <h2>Tes playlists</h2>
+      <ul id="playlists-list"></ul>
+    </section>
+
+    <section id="playlist-details" class="hidden">
+      <h2>Détails de la playlist <span id="playlist-title"></span></h2>
+      <button id="btn-sort-artist">Trier par artiste</button>
+      <ul id="playlist-tracks"></ul>
+    </section>
+
+    <section id="stats-section" class="hidden">
+      <h2>Ton profil musical - Playlift Wrap</h2>
+      <div id="stats-content">
+        <p><strong>Top artistes :</strong> <span id="top-artists"></span></p>
+        <p><strong>Top musiques :</strong> <span id="top-tracks"></span></p>
+        <p><strong>Genres favoris :</strong> <span id="top-genres"></span></p>
+        <p><strong>Heures d'écoute totales :</strong> <span id="total-hours"></span></p>
+      </div>
+    </section>
+
+    <section id="error-message" class="hidden"></section>
+  </main>
+
+  <footer>
+    <p>© 2025 Playlift by Leny</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
